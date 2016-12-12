@@ -1,0 +1,46 @@
+{
+  "name": "@deecision/resolver",
+  "version": "0.1.0",
+  "description": "Options resolver library",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:audiosynth/resolver.git",
+    "type": "git"
+  },
+  "author": "Jean-François Simon <contact@jfsimon.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "@deecision/eslint-config": "^0.1.1",
+    "babel": "^6.5.2",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^17.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-transform-system-import-commonjs": "^1.0.2",
+    "eslint": "^3.12.0",
+    "flow-bin": "^0.36.0",
+    "jest": "^17.0.3"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jest --coverage || true",
+    "flow": "./node_modules/.bin/flow check; test $? -eq 0 -o $? -eq 2",
+    "build": "rm -rf lib/* ; ./node_modules/.bin/babel src --out-dir='lib' --ignore='types,**/__tests__'",
+    "lint": "./node_modules/.bin/eslint src",
+    "fixlint": "./node_modules/.bin/eslint --fix src"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs",
+      "transform-flow-strip-types",
+      "transform-system-import-commonjs"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@deecision/eslint-config/base"
+    ]
+  },
+  "dependencies": {
+    "@deecision/eslint-config": "^0.1.1"
+  }
+}
