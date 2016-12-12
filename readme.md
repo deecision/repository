@@ -9,12 +9,12 @@ Validate and normalize your data with ease.
 
 ## Get started
 
-How to install:
+**How to install:**
 
 * using **npm**: `npm install --save @deecision/resolver`
 * using **yarn**: `yarn add @deecision/resolver`
 
-How to use:
+**How to use:**
 
 ```js
 import Resolver from '@deecision/resolver';
@@ -26,6 +26,6 @@ const resolver = Resolver.create('object', { props: {
 }});
 
 // returns normalized data
-// throws violations if any
+// throws violations if validation fails
 const data = resolver.resolve(data);
 ```

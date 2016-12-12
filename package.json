@@ -1,10 +1,10 @@
 {
   "name": "@deecision/resolver",
-  "version": "0.1.0",
-  "description": "Options resolver library",
+  "version": "0.1.1",
+  "description": "Data validation + normalization made easy",
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:audiosynth/resolver.git",
+    "url": "git@github.com:deecision/resolver.git",
     "type": "git"
   },
   "author": "Jean-François Simon <contact@jfsimon.fr>",
@@ -39,8 +39,5 @@
     "extends": [
       "@deecision/eslint-config/base"
     ]
-  },
-  "dependencies": {
-    "@deecision/eslint-config": "^0.1.1"
   }
 }
